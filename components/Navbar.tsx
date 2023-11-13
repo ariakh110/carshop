@@ -26,7 +26,7 @@ function Navbar() {
             title="Sign In"
             isActive={true}
             // onClick={handleSignInClick}
-            classStyle="bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold py-2 px-4 rounded-full"
+            classStyle="text-primary-blue rounded-full bg-white min-w-[64px] font-bold border border-black"
           /> 
       </nav>
     </header>
