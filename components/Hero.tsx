@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import CustomButton from "./CustomButton";
+import Image from "next/image";
 
 function Hero() {
-  function handleClick(): void {
+  function handleClick() {
     console.log("click");
   }
   return (
@@ -20,7 +22,15 @@ function Hero() {
           title="Explore Cars"
           classStyle="bg-primary-blue text-white rounded-full mt-10"
           onClick={handleClick}
-        />
+        />''
+      </div>
+      <div className="hero__image-container">
+        <div className="hero__image">
+          <Image src='/hero.png' alt="hero image" fill className="object-contain" />
+          <div className="hero__image-overlay">
+            
+          </div>
+        </div>
       </div>
     </div>
   );

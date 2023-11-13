@@ -1,14 +1,8 @@
 "use client";
+
 import { randomUUID } from "crypto";
 import React from "react";
-type ButtonProps = {
-  name?: string | undefined;
-  isActive: boolean;
-  type: "button" | "submit";
-  onClick: Function;
-  classStyle: string;
-  title: string | undefined;
-};
+import { CustomButtonProps } from "@/types";
 function Hero({
   name = `Button` + randomUUID,
   isActive,
@@ -16,17 +10,18 @@ function Hero({
   onClick,
   classStyle,
   title = "Button Name",
-}: ButtonProps) {
+}: CustomButtonProps) {
   return (
     <button
       name={name}
       disabled={isActive}
       type={type}
       onClick={onClick}
-      className={classStyle}
+      className={`custom-btn ${classStyle}`}
     >
       {title}
     </button>
+
   );
 }
 
