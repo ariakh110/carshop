@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Footer, Navbar } from "@/components";
-
+import StyledComponentsRegistry from "@/lib/AntdRegistry";
 
 export const metadata: Metadata = {
   title: "sell any car",
@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="relative">
         <Navbar />
-        {children}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         <Footer />
       </body>
     </html>
